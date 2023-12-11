@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "EsonlineChatLogger",
+    "description": "Automatic Chat logger",
+    "version": "0.1",
+    "icons": {
+        "1": "icons/icon1.png"
+    },
+    "action":{
+        "default_popup": "html/popup.html"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "js/eso_chat_content.js"
+            ],
+            "matches": [
+                "https://esonline.tk/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://esonline.tk/*/*/*/*/*/*"
+    ]
+}
